@@ -28,18 +28,32 @@ We received the following support tickets from our Customer Support team on beha
 
 ```
 When accessing the attendee report (reports/conferences/1/attendees) it will often time-out when there are more than a few thousand attendees. When it doesn't time out, there is often too much data for our ancient app to ingest at once.
+
+Ticket 1 WIP Solution: 
+
+Pagination should fix performant issue. Unsure of implementation with J-Builder. Possibly can work if changed to Active Model Serializer.
 ```
+
 
 ### Ticket 2
 
 ```
 We would like to send an email to all of the speakers for an event and I found duplicates on the speakers report (reports/events/1/speakers). Can you ensure this report doesn't return any duplicate emails?
+
+Ticket 2 Solution: 
+
+Added uniqueness for full_name and email this should resolve duplication issue. Model also uses validates_uniqueness_of.
+
 ```
 
 ### Ticket 3
 
 ```
 I'm able to get a report of all the speakers for an event, but not all of the attendees (for all conferences in the event). Can you add an end-point: reports/events/<<event id>>/attendees ? I'd also like to exclude duplicates (by email address).
+
+
+Ticket 3 Solution:
+Email Address duplication should be resolved by ticket 2. 
 ```
 
 ### Ticket 4
