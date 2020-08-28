@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_194142) do
+ActiveRecord::Schema.define(version: 2020_08_28_183506) do
 
   create_table "attendees", force: :cascade do |t|
     t.integer "conference_id", null: false
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_194142) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["conference_id"], name: "index_speakers_on_conference_id"
+    t.index ["email"], name: "index_speakers_on_email", unique: true
+    t.index ["full_name"], name: "index_speakers_on_full_name", unique: true
   end
 
 end

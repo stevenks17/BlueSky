@@ -4,4 +4,5 @@ class Speaker < ApplicationRecord
   validates :conference, presence: true
   validates :full_name, presence: true, length: { maximum: 255 }
   validates :email, email: true
+  validates_uniqueness_of :email
 end
