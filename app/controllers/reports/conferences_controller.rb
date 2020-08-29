@@ -1,9 +1,10 @@
 module Reports
   class ConferencesController < ::ApplicationController
-    include Pagy::Backend
+
 
     def attendees
-      @pagy, @conference = pagy(Conference.find(attendee_params[:conference_id]))
+       @conference = Conference.find(attendee_params[:conference_id])
+       @pagy, @attendees = pagy(@conference.attendees, items: 500)
     end
 
     private
