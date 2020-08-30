@@ -29,9 +29,9 @@ We received the following support tickets from our Customer Support team on beha
 ```
 When accessing the attendee report (reports/conferences/1/attendees) it will often time-out when there are more than a few thousand attendees. When it doesn't time out, there is often too much data for our ancient app to ingest at once.
 
-Ticket 1 WIP Solution: 
+Ticket 1 Solution: 
 
-Pagination should fix performant issue. Unsure of implementation with J-Builder. Possibly can work if changed to Active Model Serializer.
+Pagination should fix performant issue. Unsure of implementation with J-Builder. Pagination added ?page=(number) will yield attendees for specific page
 ```
 
 
@@ -53,7 +53,7 @@ I'm able to get a report of all the speakers for an event, but not all of the at
 
 
 Ticket 3 Solution:
-Email Address duplication should be resolved by ticket 2. 
+Endpoint created via has_many through association and duplicating structure from conference view
 ```
 
 ### Ticket 4
