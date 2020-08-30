@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API 
+include Pagy::Backend
 
   rescue_from('::Exception') { |exception| rescue_me!(exception) }
   before_action :force_json_format, :set_standard_response_headers
