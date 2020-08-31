@@ -60,6 +60,14 @@ Endpoint created via has_many through association and duplicating structure from
 
 ```
 I need a report that lists all of the conferences for any given event. I need to know how many attendees each conference had, how many the event had (excluding duplicates), and I need a list of speakers for each conference. End point: reports/events/<<event id>> -- should also include event data.
+
+Ticket 4 Solution:
+
+event.conferences
+conference.attendee.count
+event.attendee.count
+conference.speakers
+
 ```
 
 ## Submission

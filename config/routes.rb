@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     match 'conferences/:conference_id/attendees' => 'conferences#attendees', via: :get
     match 'events/:event_id/speakers' => 'events#speakers', via: :get
     match 'events/:event_id/attendees' => 'events#attendees', via: :get
+    match 'events/:event_id' => 'events#event_id', via: :get
 
   end
 
