@@ -68,6 +68,8 @@ conference.attendee.count
 event.attendee.count
 conference.speakers
 
+removed duplicate attendees by writing SQL Statement: DELETE FROM attendees WHERE ROWID NOT IN (SELECT min(rowid) FROM attendees GROUP BY full_name)
+
 ```
 
 ## Submission
